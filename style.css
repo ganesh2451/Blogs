@@ -1,0 +1,496 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:darkslategrey;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color:darkcyan;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background-image: url("blogging-4812375.jpg");
+    background-repeat:inherit;
+    background-size:cover;
+   
+  }
+  
+
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+    height: 120vh;
+    
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .register {
+    background-color:darkcyan;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .register:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+
+  .heading{
+    
+    text-align: center;
+    color:rgb(227, 240, 240);
+    background-color: darkslategrey;
+    
+    
+  }
+  /* .mycontainer{
+    width: 70%;
+  } */
+
+
+  /* body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;} */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid darkslategrey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  } */
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 darkcyan;
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+   
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+  }
+  
+  /* .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } */
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+
+  /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url("blog.webp");
+} */
+
+header {
+    background-color: darkslategrey;
+    color:white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid darkslategrey;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  /* display: flex;
+  /* justify-content: center;
+  align-items: center; */ 
+  /* height: 100vh; */
+  /* margin:0;
+  background-color: #f1f1f1;
+  background-image: url("blog.webp");
+} */ */
+
+form {
+  border: 3px solid #f1f1f1;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  width: 100%;
+  
+
+}
+
+.container {
+  padding: 16px;
+  width: 50%;
+ 
+  
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button[type=submit], .cancelbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button[type=submit]:hover, .cancelbtn:hover {
+  opacity: 1;
+}
+
+.cancelbtn {
+  background-color: #f44336;
+}
+
+span.psw {
+  float:inline-start;
+  padding-top: 5px;
+}
+
+a {
+  color: dodgerblue;
+}
+
+a:hover {
+  color: darkblue;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.footer{
+  background-color: darkslategrey;
+  color: #ede9e9;
+}
+
+
+.container-wel{
+  width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+/* Style for the content page container */
+.content_page {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the title */
+.content_page h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for the author information */
+.content_page p strong {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Style for the content */
+.content_page p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Basic styles for the About Us section */
+.about-us {
+  background-color:darkcyan;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ 
+}
+
+/* Styling for the heading */
+.about-us h2 {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the paragraphs */
+.about-us p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Styling for the closing signature */
+.about-us p:last-child {
+  font-size: 1em;
+  color: white;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.about-us h3{
+  color: white;
+  font-size: 1.3em;
+  text-align: justify;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
