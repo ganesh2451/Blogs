@@ -9,7 +9,10 @@ if(isset($_POST['login']))
     if($result->num_rows>0)
     {
         session_start();
+        $user = $result->fetch_assoc();
         $_SESSION['username']=$emailid;
+        $_SESSION['user_id'] = $user['id'];
+        
         echo "<meta http-equiv='refresh' content='0;content.php'/>";
     }
 else{

@@ -23,15 +23,9 @@
     
     <button type="submit" name="login" id="login">Login</button>
     <p>Don't Have an account?<a href="register.php"> register Here</a></p>
-   
-    <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-   
     
   </div>
-
-  
-
-  
+ 
 </form>
 
 <?php include 'footer.html';?>
