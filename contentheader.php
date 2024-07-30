@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a class="active" href="content.php">Home</a></li>
-                <li><a href="upload.php">Click Here To Upload Your Blog</a></li>
+                <li><a href="upload.php">Click Here To Upload Your Blog</a></li>                
                 <li><a href="logout.php">Logout</a></li>
                 
             </ul>
