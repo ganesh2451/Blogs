@@ -9,25 +9,43 @@ if(isset($_POST['register']))
     $dob = $_POST['dob'];
 
     include 'dbconfig.php';
-    if($password == $repass) 
+    
+    // Check if email already exists
+    $stmt = $conn->prepare("SELECT * FROM user WHERE emailid = ?");
+    $stmt->bind_param("s", $emailid);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if($stmt->num_rows > 0) 
     {
-        $sql = "INSERT INTO user (emailid, name, password, description, dob) VALUES ('$emailid', '$name', '$password', '$description', '$dob')";
-        if($conn->query($sql)) 
+        echo "<script>alert('Email ID already exists. Please try a different email ID.')</script>";
+        echo "<meta http-equiv='refresh' content='0;register.php'/>";
+    }
+    else 
+    {
+        if($password == $repass) 
         {
-            echo "<script>alert('Data added successfully')</script>";
-            echo "<meta http-equiv='refresh' content='0;login.html'/>";
+            $stmt = $conn->prepare("INSERT INTO user (emailid, name, password, description, dob) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("sssss", $emailid, $name, $password, $description, $dob);
+            if($stmt->execute()) 
+            {
+                echo "<script>alert('Data added successfully')</script>";
+                echo "<meta http-equiv='refresh' content='0;login.php'/>";
+            } 
+            else 
+            {
+                echo "<script>alert('Error adding data')</script>";
+                echo "<meta http-equiv='refresh' content='0;register.php'/>";
+            }
         } 
         else 
         {
-            echo "<script>alert('Error adding data')</script>";
+            echo "<script>alert('Passwords do not match')</script>";
             echo "<meta http-equiv='refresh' content='0;register.php'/>";
         }
-    } 
-    else 
-    {
-        echo "<script>alert('Passwords do not match')</script>";
-        echo "<meta http-equiv='refresh' content='0;register.php'/>";
     }
+    $stmt->close();
+    $conn->close();
 }
 else 
 {
