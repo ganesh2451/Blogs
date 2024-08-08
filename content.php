@@ -47,7 +47,7 @@
                 $likes_count = $likes_result->fetch_assoc()['count'];
         
                 // Fetch comments
-                $comments_sql = "SELECT comments.comment, user.name 
+                $comments_sql = "SELECT comments.id, comments.comment, comments.user_id, user.name 
                                  FROM comments 
                                  JOIN user ON comments.user_id = user.id 
                                  WHERE comments.post_id='$id' 
@@ -69,6 +69,12 @@
                 if ($comments_result->num_rows > 0) {
                     while ($comment_row = $comments_result->fetch_assoc()) {
                         echo '<p><strong>' . htmlspecialchars($comment_row['name']) . ':</strong> ' . htmlspecialchars($comment_row['comment']) . '</p>';
+                        if ($_SESSION['user_id'] == $comment_row['user_id']) {
+                            echo "<form method='POST' action='delete_comment.php' style='display:inline;'>
+                                    <input type='hidden' name='comment_id' value='" . $comment_row['id'] . "'>
+                                    <input type='submit' name='delete' value='Delete'>
+                                  </form>";
+                        }
                     }
                 } else {
                     echo '<p>No comments yet.</p>';

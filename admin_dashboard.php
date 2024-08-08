@@ -101,7 +101,7 @@ if (isset($_POST['delete'])) {
             
             <th>Title</th>
             <th>Content</th>
-            <th>Author</th>
+            
             <th>Actions</th>
         </tr>
         <?php
@@ -115,7 +115,7 @@ if (isset($_POST['delete'])) {
                 
                 echo "<td>" . htmlspecialchars($row['title']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['content']) . "</td>";
-                echo "<td>" . htmlspecialchars($row['author']) . "</td>";
+                
                 echo "<td>
                     <form method='POST' action='' style='display:inline;'>
                         <input type='hidden' name='blog_id' value='" . $row['id'] . "'>
